@@ -18,11 +18,11 @@ function Addpost(props) {
         formData.append('file',file)
 
         axios.post('https://simply-server.onrender.com/addpost',formData, {
-    // <--- Add this to send cookies!
+   // <--- Add this to send cookies!
 })
         .then(result => {console.log("login");
             console.log(result.data);
-            if(result.data ==='post added success'){
+            if(result.data =='token is not available' || result.data == "post added success"){
                 // if(result.data.role === 'admin'){
                 //     navigate('/admin')
                 // }
