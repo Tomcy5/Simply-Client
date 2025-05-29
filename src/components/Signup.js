@@ -12,7 +12,7 @@ const Signup = () => {
 
     const signsubmit=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:3001/',{name,email,password})
+        axios.post('https://simply-server.onrender.com/',{name,email,password})
         .then(result => {console.log(result)
             navigate('/home')})
         .catch(err => console.log(err))

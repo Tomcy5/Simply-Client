@@ -17,7 +17,7 @@ function Addpost(props) {
         formData.append('description',description)
         formData.append('file',file)
 
-        axios.post('http://localhost:3001/addpost',formData, {
+        axios.post('https://simply-server.onrender.com/addpost',formData, {
   withCredentials: true  // <--- Add this to send cookies!
 })
         .then(result => {console.log("login");

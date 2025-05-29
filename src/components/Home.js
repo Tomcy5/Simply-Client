@@ -8,7 +8,7 @@ function Home(props) {
 
     const [posts,setPosts]= useState([])
     useEffect(()=>{
-        axios.get('http://localhost:3001/getposts')
+        axios.get('https://simply-server.onrender.com/getposts')
             .then(result =>{
                 // console.log(result);
                 setPosts(result.data)
@@ -26,7 +26,7 @@ function Home(props) {
                         (
                             <Link to={`/viewpost/${post._id}`} className="postlink">
                         <div className="post-display">
-                            <img src={`http://localhost:3001/Images/${post.file}`} alt="" srcset="" />
+                            <img src={`https://simply-server.onrender.com/Images/${post.file}`} alt="" srcset="" />
                             <div className="post-dis-text">
                                 <h2>{post.title}</h2>
                                 <p>{post.description}</p>

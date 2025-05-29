@@ -9,7 +9,7 @@ function Navbar(props) {
     const navigate = useNavigate();
 
     const handlelogout = ()=>{
-       axios.get('http://localhost:3001/logout')
+       axios.get('https://simply-server.onrender.com/logout')
         .then(res =>{
                 if(res.data === "cookie cleared")
             navigate('/login')
